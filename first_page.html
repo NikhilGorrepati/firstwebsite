@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Basic HTML Page</title>
+    <style>
+        body {
+            position: relative;
+            height: 2000px;
+            font-size: 16px;
+            background-color: white;
+            transition: background-color 0.5s ease;
+        }
+
+        .background-image {
+            background-image: url("dallelama.png");
+            background-position: top center; /* Update the background position to start from the top */
+            background-size: contain;
+            background-repeat: repeat;
+        }
+
+        .text {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+    <p class="text" id="text-container">This is a basic HTML page with some text.</p>
+    <button onclick="toggleBackground()">Toggle Background</button>
+    <script>
+        function toggleBackground() {
+            var body = document.body;
+            var hasBackgroundImage = body.classList.contains('background-image'); // Check if body has the background-image class
+
+            if (hasBackgroundImage) {
+                body.classList.remove('background-image'); // Remove the background-image class
+            } else {
+                body.classList.add('background-image'); // Add the background-image class
+            }
+        }
+    </script>
+</body>
+</html>
